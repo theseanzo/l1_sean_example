@@ -1,0 +1,100 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+*{/*this applies to every html element*/
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: bisque;
+   /* border-style: solid; /*this could also be 'dotted', 'dashed', 'double', 'ridge'*/
+    /* border-width: 3px;
+    border-color: black; */
+    border: 3px solid black;/*this is short hand to do the above code. "border-width border-style border-color" */
+    border-radius: 5px;
+
+}
+#bigBox{
+    background-color: gainsboro;
+    /*If an element height is not specified, the height will be computed based on the height of its content. Usually*/
+    padding-top:5px; /*This adds 5px of padding between the top of this box and its content*/
+    padding-bottom:5px; /*This adds 5px padding between the bottom of this box and its content*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 10px 5px 10px; /*"padding-top padding-right padding-bottom padding-left"*/
+    padding: 5px 10px; /*padding top and bottom padding right and left*/
+    /*padding: 5px; this is 5px on all sides*/
+    margin-top:5px; /*This adds 5px between the previous element and this box*/
+    margin-bottom:5px; /*This add 5px between this box and the next element*/
+    margin: 5px 0px 5px 0px; /*margin-top margin-right margin-bottom margin-left*/
+    margin: 5px 0px; /*margin top and bottom margin right and left*/
+    /*margin: 5px; This would be 5px margin on all sides*/
+    border: 5px solid black; /*this is an even border of 5px solid black around the box*/
+    border-width: 5px;
+    border-style: dotted solid dashed solid; /*top right bottom left*/
+}
+
+.tinyBox{
+    display:block;/*every div is initially set to display block by default*/
+    width: 200px;
+    height: 50px;
+    background-color: midnightblue;
+}
+/**Remember: these are unique IDs for three elements*/
+#tB1{
+    display:inline-block; /**Both of these elements use inline-block. This means they are put inline with one another. Inline block elements will continue to be inline with one another until they reach the end of a page's width, or the next element is a display block element.*/
+    background-color: blue;    
+}
+#tB2{
+    display:inline-block;
+    background-color:aquamarine;    
+}
+#tB3{
+    display: inline; /*This will have the result of tB3 not showing up, but this not intentional. inline vs inline-block, inline elements ignore values you set for width and height. Their width and height are determined only by their content. Inline elements have to have content inside of them*/
+    background-color:darkgoldenrod;    
+}
+#rightBox{
+    margin-left: 50%;
+}
+#leftBox{
+    margin-right: 50%;
+}
+/**
+* CSS BOX MODEL
+* Margins: an invisible area outside of the border, between html elements
+* Borders: adds a visible area around our padding and content
+* Padding: An invisible area around our content.
+* Content: Where text and images appear. What we are displaying 
+*/
+/*
+* The way height works for our HTML elements is using the following formula
+    element height: height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+*/
+.largeText{ /*a .selectorName means a class*/
+    font-size: 32px;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+#firstSentence{ /*a #selectorName means an id*/
+    color: blue;
+}
+#secondSentence{
+    color: green;
+}
+#thirdSentence{
+    color:crimson;
+}
+#spanText{
+    color: yellow;
+}
+.similarText{ /* This is a CSS class and all elements with this class use this code*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: purple;
+}
